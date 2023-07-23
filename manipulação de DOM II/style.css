@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2b385b;
+  color: white;
+}
+
+h2 {
+  color: blue;
+}
+
+p {
+  position: relative;
+  top: 60px;
+}
+
+#container {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  top: calc(50% - 25vh);
+  text-align: center;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  padding: 30px;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 30px;
+  background-color: rgb(225, 110, 14);
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.68);
+}
+
+button {
+  border-radius: 10px;
+  padding: 7px 12px;
+  color: white;
+  border: 0;
+}
+
+.botao-editar {
+  background-color: green;
+}
+
+.botao-apagar {
+  background-color: red;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  top: 120px;
+}

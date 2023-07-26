@@ -7,16 +7,6 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #2b385b;
-  color: white;
-}
-
-h2 {
-  color: blue;
-}
-
-p {
-  position: relative;
-  top: 60px;
 }
 
 #container {
@@ -35,29 +25,9 @@ p {
   display: inline-block;
   text-align: center;
   border-radius: 30px;
-  background-color: rgb(225, 110, 14);
   box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.68);
 }
 
-button {
-  border-radius: 10px;
-  padding: 7px 12px;
-  color: white;
-  border: 0;
-}
-
-.botao-editar {
-  background-color: green;
-}
-
-.botao-apagar {
-  background-color: red;
-}
-
-.btn {
-  display: inline-block;
-  text-align: center;
-  border-radius: 10px;
-  position: relative;
-  top: 120px;
+.card-orange {
+  background-color: #e16e0e;
 }

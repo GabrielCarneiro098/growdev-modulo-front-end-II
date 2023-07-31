@@ -3,7 +3,7 @@ const base = document.querySelector("#valor_base");
 const transporte = document.querySelector("#valor_transporte");
 const alimentacao = document.querySelector("#valor_alimentacao");
 const receitaTotal = document.querySelector("#valor_receita");
-
+const inputs = document.querySelectorAll("input[type='number'");
 const automovel = document.querySelector("#valor_automovel");
 const faltas = document.querySelector("#faltas");
 const descontoTotal = document.querySelector("#valor_descontos");
@@ -27,3 +27,8 @@ function calcularTotal() {
 }
 
 calcular.addEventListener("click", calcularTotal);
+
+inputs.forEach((input) => {
+  input.setAttribute("input", calcularTotal());
+  input.setAttribute("onblur", calcularTotal());
+});

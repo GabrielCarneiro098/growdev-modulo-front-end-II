@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>API Rick & Morty</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b"
+        alt=""
+      />
+      <nav>
+        <h1>API de Rick and Morty</h1>
+        <input id="searchBar" type="text" placeholder="Pesquise" />
+      </nav>
+    </header>
+    <main>
+      <section id="characters"></section>
+      <div class="gif" style="background-color: #222222">
+        <img
+          src="https://www.icegif.com/wp-content/uploads/2022/06/icegif-519.gif"
+          alt=""
+        />
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <h4>Personagens: <span id="personagens"></span></h4>
+        <h4>Localizações: <span id="localizacoes"></span></h4>
+        <h4>Episódios: <span id="episodios"></span></h4>
+      </nav>
+      <p>
+        Desenvolvido por:
+        <a href="https://github.com/GabrielCarneiro098" target="_blank"
+          ><span class="name">Gabriel Carneiro das Virgens</span></a
+        >
+        em 2023
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

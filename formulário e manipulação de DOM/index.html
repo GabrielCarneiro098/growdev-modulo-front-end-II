@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Formulário</h1>
+    <form>
+      <fieldset>
+        <legend>Dados pessoais</legend>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required />
+        <br />
+        <br />
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" required />
+        <br />
+        <br />
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" required />
+        <br />
+        <br />
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado">
+          <option value="Brasilia">Brasilia</option>
+          <option value="Espírito Santo">Espírito Santo</option>
+          <option value="Goiás">Goiás</option>
+          <option value="Mato Grosso">Mato Grosso</option>
+          <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+          <option value="Minas Gerais">Minas Gerais</option>
+          <option value="Paraná">Paraná</option>
+          <option value="Rio de janeiro">Rio de janeiro</option>
+          <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+          <option value="Santa Catarina">Santa Catarina</option>
+          <option value="São Paulo">São Paulo</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Dados profissionais</legend>
+        <label><b>Natureza de Cargo</b></label>
+        <br />
+        <label for="">
+          <input type="radio" value="Gerência" name="cargo" checked />Gerência
+        </label>
+        <label for="">
+          <input type="radio" value="Financeiro" name="cargo" />Financeiro
+        </label>
+        <label for="">
+          <input type="radio" value="Recepção" name="cargo" />Recepção
+        </label>
+        <label for="">
+          <input
+            type="radio"
+            value="Administrativo"
+            name="cargo"
+          />Administrativo
+        </label>
+        <label for="">
+          <input type="radio" value="Juridico" name="cargo" />Juridico
+        </label>
+        <br />
+        <br />
+        <label><b>Área de interesse</b></label>
+        <br />
+        <label for="">
+          <input type="checkbox" value="Computação" />Computação
+        </label>
+        <label for="">
+          <input type="checkbox" value="Biologia" />Biologia
+        </label>
+        <label for="">
+          <input type="checkbox" value="Meio Ambiente" />Meio Ambiente
+        </label>
+        <label for="">
+          <input type="checkbox" value="Engenharia" />Engenharia
+        </label>
+        <label for="">
+          <input type="checkbox" value="História" />História
+        </label>
+        <br />
+        <br />
+        <br />
+
+        <label for="">Mini-curriculo:</label>
+        <textarea
+          name="curriculo"
+          id="curriculo"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </fieldset>
+      <input type="submit" id="enviar_btn" value="Enviar" />
+      <input type="reset" id="reset_btn" value="Limpar" onreset="reset()" />
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      const nome = document.querySelector("#nome");
+      const endereco = document.querySelector("#endereco");
+      const cidade = document.querySelector("#cidade");
+      const estado = document.querySelector("select");
+      const cargos = document.querySelectorAll("input[name=cargo]");
+      const areas = document.querySelectorAll("input[type=checkbox]");
+      const curriculo = document.querySelector("textarea[name=curriculo]");
+
+      var areaSelecionada = false;
+
+      function validarCheckbox() {
+        areas.forEach((area) => {
+          if (area.checked) {
+            areaSelecionada = true;
+          }
+        });
+
+        if (!areaSelecionada) {
+          alert("Por favor, seleciona pelo menos uma área de interesse.");
+        } else {
+          getValue();
+        }
+      }
+
+      function reset() {
+        nome.value = "";
+        endereco.value = "";
+        cidade.value = "";
+        curriculo.value = "";
+        areaSelecionada = false;
+        checkboxes.forEach((checkbox) => {
+          checkboxes.set;
+        });
+      }
+
+      function getValue() {
+        var cargoSelecionado;
+        var areasDeInteresse = [];
+
+        cargos.forEach((cargo) => {
+          if (cargo.checked) {
+            cargoSelecionado = cargo.value;
+          }
+        });
+
+        areas.forEach((area) => {
+          if (area.checked) {
+            areasDeInteresse.push(area.value);
+          }
+        });
+
+        const usuario = {
+          nome: nome.value,
+          endereco: endereco.value,
+          cidade: cidade.value,
+          estado: estado.value,
+          cargo: cargoSelecionado,
+          areas: [],
+          curriculo: curriculo.value,
+        };
+
+        usuario.areas.push(areasDeInteresse);
+
+        console.log(usuario);
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        validarCheckbox();
+      });
+    </script>
+  </body>
+</html>

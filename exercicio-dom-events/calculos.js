@@ -11,6 +11,8 @@ const descontoTotal = document.querySelector("#valor_descontos");
 const valorTotal = document.querySelector("#valor_total");
 const calcular = document.querySelector("#btn_calcular");
 
+function calcInput() {}
+
 function calcularTotal() {
   var valorBase = parseFloat(base.value);
   var valorTransporte = parseFloat(transporte.value);
@@ -24,11 +26,10 @@ function calcularTotal() {
   descontoTotal.value = (descontoAutomovel + descontoFaltas).toFixed(2);
 
   valorTotal.value = (receitaTotal.value - descontoTotal.value).toFixed(2);
+
+  inputs.forEach((input) => {
+    input.addEventListener("blur", calcularTotal);
+  });
 }
 
 calcular.addEventListener("click", calcularTotal);
-
-inputs.forEach((input) => {
-  input.setAttribute("input", calcularTotal());
-  input.setAttribute("onblur", calcularTotal());
-});

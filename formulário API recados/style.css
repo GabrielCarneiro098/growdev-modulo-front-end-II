@@ -1,0 +1,44 @@
+/* Estilização geral do formulário */
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para os rótulos (labels) */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Estilo para os campos de entrada (input) */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para os botões */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Estilo para o botão de login */
+button[type="submit"]:first-of-type {
+  background-color: #3498db;
+}
+
+/* Estilo para o botão de cadastro */
+button[type="submit"]:last-of-type {
+  background-color: #2ecc71;
+}

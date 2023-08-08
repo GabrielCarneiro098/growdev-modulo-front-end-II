@@ -17,7 +17,6 @@ form.addEventListener("submit", (event) => {
     })
     .then(function (response) {
       console.log(response);
-      window.location.href = "https://api-recados-nk2h.onrender.com/recados";
     })
     .catch(function (response) {
       console.log(response);

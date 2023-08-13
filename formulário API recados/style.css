@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* Estilização geral do formulário */
 form {
   width: 300px;
@@ -41,4 +46,21 @@ button[type="submit"]:first-of-type {
 /* Estilo para o botão de cadastro */
 button[type="submit"]:last-of-type {
   background-color: #2ecc71;
+}
+
+.recado {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.navigateButton {
+  background-color: #000000;
+
+  width: 80px;
+}
+
+.buttonDisabled {
+  display: none;
 }

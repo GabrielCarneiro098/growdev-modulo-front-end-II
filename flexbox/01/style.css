@@ -1,0 +1,20 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.yellow {
+  background-color: orange;
+}
+
+.blue {
+  background-color: blue;
+}

@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  border-radius: 100%;
+  background-color: orange;
+  align-self: flex-end;
+}
+
+.square {
+  background-color: blue;
+}

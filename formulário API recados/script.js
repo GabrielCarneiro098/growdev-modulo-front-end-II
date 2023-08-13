@@ -1,8 +1,8 @@
 const form = document.querySelector("form");
 const loginBtn = document.getElementById("login");
 const teste = document.querySelector("#teste");
-
-console.log(form);
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -17,6 +17,17 @@ form.addEventListener("submit", (event) => {
     })
     .then(function (response) {
       console.log(response);
+      const body = document.querySelector("body");
+      const recados = response.data.paginatedRecados;
+      body.innerHTML = "";
+      recados.forEach((recado) => {
+        console.log(recado);
+        body.innerHTML += `<div class="recado">
+        <h1>${recado.id}</h1>
+        <h1>${recado.titulo}</h1>
+        <p>${recado.descricao}</p>
+      </div>`;
+      });
     })
     .catch(function (response) {
       console.log(response);

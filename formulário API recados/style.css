@@ -1,66 +1,48 @@
 body {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-/* Estilização geral do formulário */
 form {
-  width: 300px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 10px;
+  border: 1px solid;
+  padding: 30px;
+  border-radius: 10px;
 }
 
-/* Estilo para os rótulos (labels) */
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-/* Estilo para os campos de entrada (input) */
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Estilo para os botões */
-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Estilo para o botão de login */
-button[type="submit"]:first-of-type {
-  background-color: #3498db;
-}
-
-/* Estilo para o botão de cadastro */
-button[type="submit"]:last-of-type {
-  background-color: #2ecc71;
+form button {
+  border-radius: 100px;
 }
 
 .recado {
   background-color: grey;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+}
+
+#board {
+  justify-content: center;
+  gap: 20px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+footer {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer button {
+  padding: 20px;
+  background-color: rgb(0, 102, 255);
+  color: white;
   border-radius: 10px;
-}
-
-.navigateButton {
-  background-color: #000000;
-
-  width: 80px;
-}
-
-.buttonDisabled {
-  display: none;
+  border: none;
 }

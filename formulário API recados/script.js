@@ -1,8 +1,6 @@
 const form = document.querySelector("form");
 const loginBtn = document.getElementById("login");
-const teste = document.querySelector("#teste");
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
+const board = document.querySelector("#board");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -16,21 +14,32 @@ form.addEventListener("submit", (event) => {
       senha: senha,
     })
     .then(function (response) {
-      console.log(response);
       const body = document.querySelector("body");
       const recados = response.data.paginatedRecados;
-      body.innerHTML = "";
+      body.removeChild(form);
       recados.forEach((recado) => {
-        console.log(recado);
-        body.innerHTML += `<div class="recado">
+        board.innerHTML += `<div class="recado">
         <h1>${recado.id}</h1>
-        <h1>${recado.titulo}</h1>
+        <h2>${recado.titulo}</h2>
         <p>${recado.descricao}</p>
-      </div>`;
+      </div>
+      `;
       });
+      body.innerHTML += `<footer>
+      <button id="prev" class="navigateButton">Previous</button>
+      <button id="next" class="navigateButton">Next</button>
+    </footer>`;
+      const prev = document.querySelector("#prev");
+      const next = document.querySelector("#next");
     })
     .catch(function (response) {
       console.log(response);
       alert(response.response.data);
     });
+});
+
+next.addEventListener("click", function () {
+  axios.get("/recados").then(function (response) {
+    console.log(response);
+  });
 });

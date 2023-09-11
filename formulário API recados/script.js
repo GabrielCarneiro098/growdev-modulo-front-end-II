@@ -9,7 +9,7 @@ form.addEventListener("submit", (event) => {
   const senha = document.querySelector("#senha").value;
 
   axios
-    .post("https://api-recados-nk2h.onrender.com/login", {
+    .get("https://api-recados-nk2h.onrender.com/login", {
       email: email,
       senha: senha,
     })
